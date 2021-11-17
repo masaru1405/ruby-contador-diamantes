@@ -10,11 +10,16 @@ def contadorDeDiamantes(input)
    #Verificação para cada item do array
    while i <= lista.length 
       if lista[i] == '<' and lista[i+1] == '>'
-         #Deleta os elementos '<' e '>'. Observe que na segunda chamada do comando 'delete_at(x)', o valor de 'x' não é 'i+1', é simplesmente'i', pois ao executar o primeiro comando 'delete_at', o valor de indice 'i' já não existe, e portanto já houve um 'shift' dos elementos à esquerda de 'i'. Se fizéssemos na segunda chamada de 'delete_at(i+1)', estaríamos pulando o elemento '>' e excluindo somente seu próximo elemento.
+         # Deleta os elementos '<' e '>'. Observe que na segunda chamada do comando 'delete_at(x)', 
+         # o valor de 'x' não é 'i+1', é simplesmente'i', pois ao executar o primeiro comando 
+         # 'delete_at', o valor de indice 'i' já não existe, e portanto já houve um 'shift' dos 
+         # elementos à esquerda de 'i'. Se fizéssemos na segunda chamada de 'delete_at(i+1)', 
+         # estaríamos pulando o elemento '>' e excluindo somente seu próximo elemento.
          lista.delete_at(i)
          lista.delete_at(i)
 
-         #Se descomentar a linha abaixo, comente os dois comandos acima (lista.delete_at(i)), para não executar mais de duas vezes
+         # Se descomentar o print abaixo, comente os dois comandos acima (lista.delete_at(i)), 
+         # para não executar mais de duas vezes.
          #print "*IF 1 => i: #{i} - i+1: #{i+1} - *DELETE: #{lista.delete_at(i)} , #{lista.delete_at(i)}\n"
 
          count += 1
